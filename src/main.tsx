@@ -8,6 +8,10 @@ initBrowser().catch((err) => {
   console.warn("[browser] Init error:", err.message);
 });
 
+if (/CrOS/.test(navigator.userAgent)) {
+  document.documentElement.classList.add('chromeos');
+}
+
 function applyStoredSettings() {
   const get = (k: string) => localStorage.getItem(k);
 

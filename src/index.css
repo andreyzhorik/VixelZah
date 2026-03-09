@@ -55,37 +55,35 @@
 /* Chromebook / sRGB-only displays render semi-transparent borders much brighter
    than Mac P3 displays. This overrides just the border/glass variables for those
    devices, making borders dimmer without touching Mac styling at all. */
-@media (color-gamut: srgb) and (not (color-gamut: p3)) {
-  :root {
-    --border: 217 15% 18% / 1;
-    --input: 217 15% 16% / 1;
-    --glass: 217 15% 14% / 1;
-    --glass-border: 217 15% 19% / 1;
-    --glass-hover: 217 15% 22% / 1;
-    --glass-active: 217 15% 25% / 1;
-    --sidebar-border: 217 15% 15% / 1;
-    --sidebar-accent: 220 20% 14% / 1;
-  }
+.chromeos {
+  --border: 217 15% 18%;
+  --input: 217 15% 16%;
+  --glass: 217 15% 14%;
+  --glass-border: 217 15% 19%;
+  --glass-hover: 217 15% 22%;
+  --glass-active: 217 15% 25%;
+  --sidebar-border: 217 15% 15%;
+  --sidebar-accent: 220 20% 14%;
+}
 
-  .glass {
-    background: hsl(220 20% 11%);
-    border: 1px solid hsl(217 15% 18%);
-  }
-  .glass-heavy {
-    background: hsl(220 20% 12%);
-    border: 1px solid hsl(217 15% 19%);
-  }
-  .glass-subtle {
-    background: hsl(220 20% 9%);
-  }
-  .category-card {
-    background: hsl(220 20% 10%);
-    border: 1px solid hsl(217 15% 16%);
-  }
-  .category-card:hover {
-    background: hsl(220 20% 14%);
-    border-color: hsl(217 20% 22%);
-  }
+.chromeos .glass {
+  background: hsl(220 20% 11%);
+  border: 1px solid hsl(217 15% 18%);
+}
+.chromeos .glass-heavy {
+  background: hsl(220 20% 12%);
+  border: 1px solid hsl(217 15% 19%);
+}
+.chromeos .glass-subtle {
+  background: hsl(220 20% 9%);
+}
+.chromeos .category-card {
+  background: hsl(220 20% 10%);
+  border: 1px solid hsl(217 15% 16%);
+}
+.chromeos .category-card:hover {
+  background: hsl(220 20% 14%);
+  border-color: hsl(217 20% 22%);
 }
 
 @layer base {
